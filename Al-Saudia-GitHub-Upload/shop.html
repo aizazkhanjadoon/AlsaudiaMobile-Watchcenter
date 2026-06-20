@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Al-Saudia Mobile & Watch Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head><body>
+  <div class="page">
+    <header class="header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="index.html" aria-label="Al-Saudia home">
+          <span class="logo-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 18.5h10M8.5 4.5h7l2.2 12h-11.4l2.2-12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.3 9.2h5.4M8.7 12.2h6.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <span class="brand"><strong>Al-Saudia</strong><span>Mobile & Watch Centre</span></span>
+        </a>
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="searchInput" type="search" placeholder="Search all products" autocomplete="off">
+        </label>
+        <div class="nav-actions">
+          <a class="nav-link " href="index.html">Home</a>
+          <a class="nav-link active" href="shop.html">Shop</a>
+          <button class="icon-button" id="cartOpen" type="button" aria-label="Open selection"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 8h12l-1.2 8.3a2 2 0 0 1-2 1.7H9.7a2 2 0 0 1-2-1.7L6.5 8Zm0 0L6 5H3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="badge" id="cartCount">0</span></button>
+        </div>
+      </nav>
+    </header>    <main id="top">
+      <section class="section alt" id="products" style="padding-top: 52px;">
+        <div class="inner">
+          <div class="section-head">
+            <div><div class="eyebrow">Full catalog</div><h1 style="max-width: 12ch; font-size: clamp(2.2rem, 5vw, 4.8rem);">Shop Products</h1><p>Browse all available product types by category. Customers can request current availability directly from the store.</p></div>
+            <div class="section-actions"><a class="button secondary" href="index.html">Back home</a></div>
+          </div>
+          <div class="filters" role="group" aria-label="Shop category filters" style="margin-bottom: 26px; justify-content: flex-start;">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="mobiles" type="button">Mobiles</button>
+            <button class="filter" data-filter="watches" type="button">Watches</button>
+            <button class="filter" data-filter="accessories" type="button">Accessories</button>
+          </div>
+          <div id="shopGroups"></div>
+          <div class="empty" id="emptyState">No matching products found.</div>
+        </div>
+      </section>
+    </main>    <footer class="footer">
+      <div class="footer-inner">
+        <div><div class="brand"><strong>Al-Saudia Mobile & Watch Centre</strong><span>Premium mobiles, watches, and accessories</span></div><p>Store hours: 10:00 AM - 11:00 PM</p></div>
+        <div class="footer-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="tel:+000000000">Call</a></div>
+      </div>
+    </footer>
+  </div>
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer" aria-label="Product selection" aria-hidden="true">
+    <div class="drawer-head"><h2>Your Selection</h2><button class="icon-button" id="cartClose" type="button" aria-label="Close selection"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-foot"><p class="drawer-note">Review selected products, then request availability from the store team.</p><button class="button" type="button">Request availability</button><button class="button secondary" type="button" id="clearCart">Clear selection</button></div>
+  </aside>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
